@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class SuperDuperManWeight {
+
+	public static void main(String[] args) {
+		
+		System.out.print("How much does each Super Duper Man weight: ");
+		Scanner in = new Scanner(System.in);
+		double inputWeight = in.nextDouble();
+		
+		System.out.print("How tall is the wedge: ");
+		int wHeight = in.nextInt();
+		
+		new SuperDuperManWeight().printPascal(wHeight-1); //This will print the Pascal's triangle 
+		
+		in.close();
+	}
+public static void WedgeHeight() {
+	
+}
+
+public static void SDMWeight() {
+	
+}
+
+/*public static Weight(row, col) { //recursive function
+return double;
+}
+*/
+public void printPascal(int n) {
+    if(n < 0)
+        return;
+    printPascal(n - 1);
+    System.out.println();
+    for (int k = 0; k <= n; k++)
+    {
+        System.out.print(binom(n, k) + " ");
+    }
+   
+}
+
+
+public int binom(int n, int k)	{
+	if (k==n || k==0)
+		return 1;
+	else return binom(n-1,k-1) + binom(n-1, k);
+
+}
+
+
+}
